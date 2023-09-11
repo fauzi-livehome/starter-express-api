@@ -1,7 +1,10 @@
-const express = require('express')
-const app = express()
-app.all('/', (req, res) => {
-    console.log("Just got a request!")
-    res.send('Yo!')
-})
-app.listen(process.env.PORT || 3000)
+const express = require('express');
+const router = require('./excel-read-route');
+
+const app = express();
+
+app.use('/excel', router);
+
+app.listen(3000, () => {
+  console.log('App is running on Port 3000');
+});
