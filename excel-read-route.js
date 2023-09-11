@@ -4,6 +4,6 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/readExcel', readExcelController);
+router.get('/calc', readExcelController);
 
 module.exports = router;
